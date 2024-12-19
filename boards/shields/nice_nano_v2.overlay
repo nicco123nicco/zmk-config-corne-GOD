@@ -1,4 +1,4 @@
-#include <dt-bindings/led/led.h>
+include <dt-bindings/led/led.h>
 
 &pinctrl {
     spi3_default: spi3_default {
@@ -31,14 +31,14 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <10>; /* arbitrary; change at will */
+        chain-length = <27>; /* arbitrary; change at will */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
 
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 &led_strip {
-    chain-length = <21>;
+    chain-length = <27>;
 };
 };
 
